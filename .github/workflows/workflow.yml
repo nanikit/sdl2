@@ -8,8 +8,10 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        ghc: ['8.8', '8.10', '9.0', '9.2']
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        # ghc: ['8.8', '8.10', '9.0', '9.2']
+        ghc: ['9.2']
+        # os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [windows-latest]
         # exclude:
         #   # GHC 8.8+ only works with cabal v3+
         #   - ghc: 8.8.4
@@ -46,4 +48,4 @@ jobs:
             mingw-w64-x86_64-crt-git
       - if: matrix.os == 'windows-latest'
         shell: msys2 {0}
-        run: cabal build
+        run: cabal build -v3
