@@ -33,7 +33,7 @@ On OSX you can install SDL with [homebrew](http://brew.sh/). pkg-config is also 
 
 On Windows you can install SDL with `pacman` under [MSYS2](https://msys2.github.io/) (or use  [stack's embedded MSYS2](https://www.reddit.com/r/haskellgamedev/comments/4jpthu/windows_sdl2_is_now_almost_painless_via_stack/)).
 
-    pacman -S mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2
+    pacman -S mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-crt-git
 
 > Note: If you want to use console output, you should add this in your cabal configuration:
 > ```

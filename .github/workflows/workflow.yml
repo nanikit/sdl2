@@ -43,6 +43,7 @@ jobs:
           install: >-
             mingw-w64-x86_64-pkg-config
             mingw-w64-x86_64-SDL2
+            mingw-w64-x86_64-crt-git
       - if: matrix.os == 'windows-latest'
         shell: msys2 {0}
         run: cabal build
